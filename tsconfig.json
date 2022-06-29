@@ -1,0 +1,41 @@
+{
+   "compilerOptions": {
+      "typeRoots": [
+         "./node_modules/@types",
+         "./src/@types"
+      ],
+      "module": "commonjs",
+      "target": "ES2017",
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "baseUrl": ".",
+      // path necessita da baseUrl para poder funcionar || para rodar o script precisa instalar tsconfig-paths
+      "paths": {
+         // ao colocar um novo path tem que adicionar junto ao babel
+         "@assets/*": ["./src/assets/*"],
+         "@config/*": ["./src/config/*"],
+         "@classes/*": ["./src/classes/*"],
+         "@controllers/*": ["./src/controllers/*"],
+         "@database/*": ["./src/database/*"],
+         "@infra/*": ["./src/infra/*"],
+         "@interfaces/*": ["./src/interfaces/*"],
+         "@repositories/*": ["./src/repositories/*"],
+         "@routes/*": ["./src/routes/*"],
+         "@shared/*": ["./src/shared/*"],
+         "@useCases/*": ["./src/useCases/*"]
+      },
+      "esModuleInterop": true,
+      "noEmitOnError": true,
+      "noImplicitAny": true,
+      "alwaysStrict": true,
+      "resolveJsonModule": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true
+   },
+   "exclude": [
+      "node_modules"
+   ],
+   "include": [
+      "src/**/*.ts"
+   ]
+}
