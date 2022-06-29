@@ -14,9 +14,9 @@
          // ao colocar um novo path tem que adicionar junto ao babel
          "@assets/*": ["./src/assets/*"],
          "@config/*": ["./src/config/*"],
-         "@classes/*": ["./src/classes/*"],
          "@controllers/*": ["./src/controllers/*"],
          "@database/*": ["./src/database/*"],
+         "@entities/*": ["./src/entities/*"],
          "@infra/*": ["./src/infra/*"],
          "@interfaces/*": ["./src/interfaces/*"],
          "@repositories/*": ["./src/repositories/*"],

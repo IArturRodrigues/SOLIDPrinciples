@@ -1,0 +1,1 @@
+Essa pasta se encaixa apenas para um exemplo, pois no neste sistema de estudo não vem ao caso essa implementação

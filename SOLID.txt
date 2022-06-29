@@ -1,0 +1,45 @@
+SOLID - 5 princípios
+
+S - Single Responsibility Principle
+
+Cada parte do código deve fazer apenas o que estiver dentro do seu contexto.
+
+A princípio a classe Employee também continha a regra de negocio para o reajuste de salario,
+porem com isso ela estava fazendo mais coisas do que deveria, sendo assim a parte que faz as validações
+foi mudada para a classe ReadjustmentUseCase que vai cuidar somente da função de validar e
+fazer o reajuste de salario dos funcionários, que esta no seu contexto.
+
+O - Open/Closed Principle
+
+Devemos estar abertos para extensão mas fechados para modificação.
+
+Ao serem adicionadas novas regras devemos extender nosso código e não mudar o que já temos,
+porém se a regra convém com outra criada anteriormente é bom ver se o caso é de extensão, ou
+se terá que modificar algum código já feito.
+
+L - Liskov Substitution Principle
+
+Favorecer composição ao invés de herança.
+
+A classe Outsourced tinha de começo estendido a classe Employee, porem sua herança nao fazia sentido,
+pois haviam métodos e implementações da classe que nao se encaixavam no contexto do Outsourced. Então
+observamos o que tem de comum entre essas duas classe e criamos uma classe apenas com os atributos e métodos
+que sao compartilhados entre as duas, assim tendo uma composição no lugar da herança.
+
+
+I - Interface Segregation Principle
+
+Uma classe não deveria ser forçada a depender de métodos que não utilizará.
+
+Uma classe não deve ter um método que não faz nada ou que apenas retorna um erro por falta de implementação,
+para evitar isso devemos criar novas interfaces, para que as interfaces não obriguem uma classe a implementar
+métodos que não fazem sentido no seu contexto.
+
+D - Dependency Inversion Principle
+
+Abstrações nao devem depender de implementações. Implementações devem depender de abstrações.
+
+Ao abstrairmos uma função em uma interface ou classe, quem estende-la ou implementa-la elas deverá fazer
+sua própria implementação do método baseado nessa abstração.
+Um exemplo disso são as validações para o reajuste de salario, cada uma das classes implementa
+uma interface e com base no seu contexto elas devem fazer sua própria implementação dessa abstração.
